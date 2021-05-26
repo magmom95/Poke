@@ -8,32 +8,24 @@ class PokeMon:
         print(self.name)
 
     def attack1(self, oppo):
-        print(f"{self.name}이{self.attack * 10}만큼 상대방을 공격했습니다!")
+        print(f"{self.attack * 10}만큼 상대방을 공격했습니다!")
         oppo.health -= self.attack * 10
         print("상대의 체력은 ", oppo.health, "가 되었습니다!")
 
     def attack2(self, oppo):
-        print(f"{self.name}이{self.attack * 20}만큼 상대방을 공격했습니다!")
-        oppo.health -= self.attack * 20
+        print(20, "만큼 상대방을 공격했습니다!")
+        oppo.health -= 20
         print("상대의 체력은 ", oppo.health, "가 되었습니다!")
 
     def attack3(self, oppo):
-        print(f"{self.name}이{self.attack * 30}만큼 상대방을 공격했습니다!")
-        oppo.health -= self.attack * 30
+        print(30, "만큼 상대방을 공격했습니다!")
+        oppo.health -= 30
         print("상대의 체력은 ", oppo.health, "가 되었습니다!")
 
     def attack4(self, oppo):
-        print(f"{self.name}이{self.attack * 40}만큼 상대방을 공격했습니다!")
-        oppo.health -= self.attack * 40
-        isDead = oppo.ifDead()
-        if not isDead:
-            print("상대의 체력은 ", oppo.health, "가 되었습니다!")
-
-    def ifDead(self):
-        if 0 >= self.health:
-            return print(f"{self.name}이 끝났습니다.")
-        else:
-            return False
+        print(40, "만큼 상대방을 공격했습니다!")
+        oppo.health -= 40
+        print("상대의 체력은 ", oppo.health, "가 되었습니다!")
 
 
 a = PokeMon("Fire", 100, 1)
