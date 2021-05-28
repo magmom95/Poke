@@ -49,3 +49,12 @@ while True:
     clear()
     if end == 1:
         break
+
+def main():
+   
+    # while receive_input():
+    #     pass
+
+
+if __name__ == "__main__":
+    main()
