@@ -39,8 +39,12 @@ class PokeMon:
         else:
             return False
 
-a = PokeMon("Fire", 100, 1)
-b = PokeMon("Water", 100, 1.1)
+test_water= water('물')
+a = PokeMon(test_water[0][0], float(test_water[0][1]), float(test_water[0][2]))
+
+test_fire= fire('불')
+b = PokeMon(test_fire[0][0], float(test_fire[0][1]), float(test_fire[0][2]))
+
 n = int(input("입력하세요 "))
 a.attack1(b)
 b.attack1(a)
