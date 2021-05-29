@@ -28,14 +28,16 @@ class PokeMon:
         isDead = oppo.ifDead()
         if not isDead:
             print("상대의 체력은 ", oppo.health, "가 되었습니다!")
-
+            
     def ifDead(self):
         if 0 >= self.health:
             print(f"{self.name}이 끝났습니다.")
+            image = Image.open(os.path.join('a.jpeg'))
+            plt.imshow(image)
+            plt.show()
             return True
         else:
             return False
-
 
 a = PokeMon("Fire", 100, 1)
 b = PokeMon("Water", 100, 1.1)
