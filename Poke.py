@@ -56,19 +56,40 @@ class PokeMon:
         else:
             return False
 
-test_water = water()
-a = PokeMon(test_water[0][0], float(test_water[0][1]), float(test_water[0][2]))
+Water = water()
+a = PokeMon(Water[0][0], float(Water[0][1]), float(Water[0][2]))
 
-test_fire = fire()
-b = PokeMon(test_fire[0][0], float(test_fire[0][1]), float(test_fire[0][2]))
+Fire = fire()
+b = PokeMon(Fire[0][0], float(Fire[0][1]), float(Fire[0][2]))
+
+Elect = electronic()
+c = PokeMon(Elect[0][0], float(Elect[0][1]), float(Elect[0][2]))
+
+Rock = rock()
+d = PokeMon(Rock[0][0], float(Rock[0][1]), float(Rock[0][2]))
 
 n = int(input("입력하세요 "))
-a.attack1(b)
-b.attack1(a)
-a.attack2(b)
-b.attack2(a)
-a.attack3(b)
-b.attack3(a)
-a.attack4(b)
-b.attack4(a)
 
+if n == 1:
+    a.attack1(b)
+    a.attack2(b)
+    a.attack3(b)
+    a.attack4(b)
+
+if n == 2:
+    b.attack1(b)
+    b.attack2(b)
+    b.attack3(b)
+    b.attack4(b)
+
+if n == 3:
+    c.attack1(b)
+    c.attack2(b)
+    c.attack3(b)
+    c.attack4(b)
+
+if n == 4:
+    d.attack1(b)
+    d.attack2(b)
+    d.attack3(b)
+    d.attack4(b)
