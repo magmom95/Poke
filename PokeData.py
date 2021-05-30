@@ -27,3 +27,21 @@ def fire():
             fire_set.append(i)
 
     return fire_set
+
+
+def electronic():
+    electronic_set = []
+    for i in Poke_read():
+        if '전기' in i:
+            electronic_set.append(i)
+
+    return electronic_set
+
+
+def rock():
+    rock_set = []
+    for i in Poke_read():
+        if '바위' in i:
+            rock_set.append(i)
+
+    return rock_set
