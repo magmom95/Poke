@@ -46,12 +46,27 @@ class PokeMon:
         if not isDead:
             print("상대의 체력은 ", oppo.health, "가 되었습니다!")
             
-    def ifDead(self):
+ def ifDead(self):
         if 0 >= self.health:
-            print(f"{self.name}이 끝났습니다.")
-            image = Image.open(os.path.join('a.jpeg'))
-            plt.imshow(image)
-            plt.show()
+            if n == 1:
+                print(f"당신의 {Water[0][0]} 포켓몬 이 승리하였습니다.")
+                image = Image.open(os.path.join('a.jpeg'))
+                plt.imshow(image)
+                plt.show()
+                time.sleep(1)
+                clear()
+            if n == 2:
+                print(f"당신의 {Fire[0][0]} 포켓몬 이 승리하였습니다.")
+            if n == 3:
+                print(f"당신의 {Elect[0][0]} 포켓몬 이 승리하였습니다.")
+                image = Image.open(os.path.join('b.jpg'))
+                plt.imshow(image)
+                plt.show()
+                time.sleep(1)
+                clear()
+            if n == 4:
+                print(f"당신의 {Rock[0][0]} 포켓몬 이 승리하였습니다.")
+
             return True
         else:
             return False
