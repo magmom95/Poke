@@ -1,5 +1,22 @@
+import os
+import platform
+import time
+from PokeData import electronic, water, fire, rock
+import matplotlib.pyplot as plt
+from PIL import Image
+
+
+def clear():
+    os_type = platform.system()
+    if os_type == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
+
+
 class PokeMon:
     def __init__(self, name, health, attack):
+
         self.name = name
         self.health = health
         self.attack = attack
